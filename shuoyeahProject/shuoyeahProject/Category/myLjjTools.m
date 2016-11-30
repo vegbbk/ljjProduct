@@ -628,5 +628,9 @@
     return peopleArr;
 }
 
++ (void)directPhoneCallWithPhoneNum:(NSString *)phoneNum {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNum]]];
+}
 
 @end

@@ -18,6 +18,11 @@ static const void *jk_UIButtonBlockKey = &jk_UIButtonBlockKey;
     [str addAttribute:NSForegroundColorAttributeName value:color range:range];
     [str addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:17] range:range];
     self.attributedText = str;
+    //下划线
+//    NSMutableAttributedString *str=(NSMutableAttributedString*)self.attributedText;
+//    [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:range];
+//    self.attributedText=str;
+
 }
 
 -(void)addTapGuester:(BOOL)isPass with:(tapLabeBlock)block{

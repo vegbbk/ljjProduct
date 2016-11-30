@@ -7,6 +7,8 @@
 //
 
 #import "JudgeSummaryLJJ.h"
+#import <Photos/Photos.h>
+#import <Contacts/Contacts.h>
 
 @implementation JudgeSummaryLJJ
 //判断手机号码格式是否正确
@@ -199,4 +201,92 @@
     }
     return YES;
 }
+
+- (BOOL)applicationHasAccessToLocationData
+{
+    
+    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusNotDetermined||[CLLocationManager authorizationStatus]==kCLAuthorizationStatusRestricted||[CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied) {
+        return NO;
+    }
+#if __IPHONE_8_0
+#else
+    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorized)
+        return YES;
+#endif
+    
+    return NO;
+}
+
+- (BOOL)applicationhasAccessToAddressBook
+{
+    BOOL hasAccess = NO;
+#if __IPHONE_9_0
+    if ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts]==CNAuthorizationStatusAuthorized) {
+        hasAccess=YES;
+        
+    }
+#else
+    switch (ABAddressBookGetAuthorizationStatus())
+    {
+        case kABAuthorizationStatusNotDetermined:
+            hasAccess = NO;
+            break;
+        case kABAuthorizationStatusRestricted:
+            hasAccess = NO;
+            break;
+        case kABAuthorizationStatusDenied:
+            hasAccess = NO;
+            break;
+        case kABAuthorizationStatusAuthorized:
+            hasAccess = YES;
+            break;
+    }
+#endif
+    
+    return hasAccess;
+}
+- (BOOL)applicationHasAccessToCalendar
+{
+    
+    BOOL hasAccess = NO;
+    
+    switch ([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent])
+    {
+        case EKAuthorizationStatusNotDetermined:
+            hasAccess = NO;
+            break;
+        case EKAuthorizationStatusRestricted:
+            hasAccess = NO;
+            break;
+        case EKAuthorizationStatusDenied:
+            hasAccess = NO;
+            break;
+        case EKAuthorizationStatusAuthorized:
+            hasAccess = YES;
+            break;
+    }
+    
+    return hasAccess;
+}
+
+- (BOOL)applicationHasAccessToPhotosLibrary
+{
+    BOOL hasAccess = NO;
+    
+#if __IPHONE_8_0
+    int author = [PHPhotoLibrary authorizationStatus];
+    if (author==PHAuthorizationStatusAuthorized) {
+        hasAccess=YES;
+    }
+    
+#else
+    int author = [ALAssetsLibrary authorizationStatus];
+    if(author== ALAuthorizationStatusAuthorized)
+    {
+        hasAccess=YES;
+    }
+#endif
+    return hasAccess;
+}
+
 @end

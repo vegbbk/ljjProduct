@@ -12,7 +12,10 @@
 #import "UIButton+ljjClick.h"
 #import "ljjUrlWebViewController.h"
 #import "GVUserDefaults+ljjSaveUserData.h"
-@interface HomeViewController ()
+@interface HomeViewController (){
+
+    UIButton * button ;
+}
 @property (nonatomic,copy)NSString * string;
 @end
 
@@ -51,12 +54,14 @@
     
     UILabel * label = [myLjjTools createLabelWithFrame:CGRectMake(100, 200, 250, 40) andTitle:@"ceshiyixi测试一定要是一定要是第一" andTitleFont:FONTSize(16) andTitleColor:BlackColor andTextAlignment:NSTextAlignmentCenter andBgColor:WHITEColor];
     [label createLabelTextWithChangeColorTxt:@"测试" withColor:[UIColor orangeColor]];
+    
     [label addTapGuester:YES with:^{
-        DLog(@"2131244");
+        [button endSubmitting];
     }];
      [self.view addSubview:label];
     
-    UIButton * button = [myLjjTools createButtonWithFrame:CGRectMake(100, 250, 140, 60) andTitle:@"发送验证码" andTitleFont:FONTSize(16) andTitleColor:BlackColor andBgColor:WHITEColor andSelecter:@selector(buttonClick:) andTarget:self andCornerRadius:4.0];
+    button = [myLjjTools createButtonWithFrame:CGRectMake(100, 250, 140, 60) andTitle:@"发送验证码" andTitleFont:FONTSize(16) andTitleColor:BlackColor andBgColor:kThemeColor andSelecter:@selector(buttonClick:) andTarget:self andCornerRadius:4.0];
+    button.touchAreaInsets = UIEdgeInsetsMake(100, 100, 100, 100);
     [self.view addSubview:button];
     
     
@@ -84,10 +89,15 @@
 
 
 -(void)buttonClick:(UIButton*)btn{
-
-    [btn sendMessageBegin:WHITEColor andChange:[UIColor orangeColor]];
-    ljjUrlWebViewController * ljjUrl = [[ljjUrlWebViewController alloc]init];
-    [self.navigationController pushViewController:ljjUrl animated:YES];
+    btn.selected = !btn.selected;
+    if(btn.selected){
+    [btn beginSubmitting:@"提交中..."];
+    }else{
+    [btn endSubmitting];
+    }
+//    [btn sendMessageBegin:WHITEColor andChange:[UIColor orangeColor]];
+//    ljjUrlWebViewController * ljjUrl = [[ljjUrlWebViewController alloc]init];
+//    [self.navigationController pushViewController:ljjUrl animated:YES];
 
 }
 

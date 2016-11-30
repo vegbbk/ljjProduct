@@ -76,6 +76,13 @@
 		5D5A139B1DE58FD800D5DEC9 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A13981DE58FD800D5DEC9 /* PhotoView.m */; };
 		5D63616E1DE3DA0300463329 /* welcomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63616D1DE3DA0300463329 /* welcomePageViewController.m */; };
 		5D6361711DE3E38E00463329 /* JudgeSummaryLJJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */; };
+		5D8741191DEE783A0051B903 /* UIButton+Submitting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8741181DEE783A0051B903 /* UIButton+Submitting.m */; };
+		5D87411C1DEE7AE00051B903 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D87411B1DEE7AE00051B903 /* UIButton+Block.m */; };
+		5D87411F1DEE7AF50051B903 /* UIButton+LXMImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D87411E1DEE7AF50051B903 /* UIButton+LXMImagePosition.m */; };
+		5D8741221DEE7B4D0051B903 /* UIButton+TouchAreaInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8741211DEE7B4D0051B903 /* UIButton+TouchAreaInsets.m */; };
+		5D8741291DEE84090051B903 /* NSTimer+MAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8741281DEE84090051B903 /* NSTimer+MAC.m */; };
+		5D8741301DEE86EC0051B903 /* NSDate+Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D87412C1DEE86EC0051B903 /* NSDate+Mac.m */; };
+		5D8741311DEE86EC0051B903 /* NSDate+MacFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D87412E1DEE86EC0051B903 /* NSDate+MacFormatter.m */; };
 		5DC9461A1DE3F3DC00991463 /* UIButton+ljjClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC946191DE3F3DC00991463 /* UIButton+ljjClick.m */; };
 		AE4C692B40DB22F033BD71BE /* Pods_shuoyeahProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429B8843A6E58EAACDE11682 /* Pods_shuoyeahProject.framework */; };
 /* End PBXBuildFile section */
@@ -185,14 +192,14 @@
 		1460CAE21D48B7FF00FDBAC1 /* baseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseTabBarViewController.h; sourceTree = "<group>"; };
 		1460CAE31D48B7FF00FDBAC1 /* baseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseTabBarViewController.m; sourceTree = "<group>"; };
 		1460CAEA1D48BB7200FDBAC1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		14F649CF1DDD81F000DAB989 /* UILabel+ljjRich.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ljjRich.h"; sourceTree = "<group>"; };
-		14F649D01DDD81F000DAB989 /* UILabel+ljjRich.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ljjRich.m"; sourceTree = "<group>"; };
+		14F649CF1DDD81F000DAB989 /* UILabel+ljjRich.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+ljjRich.h"; path = "../UILabel+ljjRich.h"; sourceTree = "<group>"; };
+		14F649D01DDD81F000DAB989 /* UILabel+ljjRich.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+ljjRich.m"; path = "../UILabel+ljjRich.m"; sourceTree = "<group>"; };
 		16AFD638B4A51DD1E9F0206B /* Pods-shuoyeahProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shuoyeahProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-shuoyeahProject/Pods-shuoyeahProject.release.xcconfig"; sourceTree = "<group>"; };
 		429B8843A6E58EAACDE11682 /* Pods_shuoyeahProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shuoyeahProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D0639DF1DE2DC8600AFC18C /* ljjUrlWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ljjUrlWebViewController.h; sourceTree = "<group>"; };
 		5D0639E01DE2DC8600AFC18C /* ljjUrlWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ljjUrlWebViewController.m; sourceTree = "<group>"; };
-		5D26090A1DE41B8B002A8B67 /* UIImageView+ljjSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ljjSetImage.h"; sourceTree = "<group>"; };
-		5D26090B1DE41B8B002A8B67 /* UIImageView+ljjSetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ljjSetImage.m"; sourceTree = "<group>"; };
+		5D26090A1DE41B8B002A8B67 /* UIImageView+ljjSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ljjSetImage.h"; path = "../UIImageView+ljjSetImage.h"; sourceTree = "<group>"; };
+		5D26090B1DE41B8B002A8B67 /* UIImageView+ljjSetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ljjSetImage.m"; path = "../UIImageView+ljjSetImage.m"; sourceTree = "<group>"; };
 		5D26090E1DE42573002A8B67 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		5D26090F1DE42573002A8B67 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		5D2609461DE43912002A8B67 /* Default Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Default Header.h"; sourceTree = "<group>"; };
@@ -217,8 +224,24 @@
 		5D63616D1DE3DA0300463329 /* welcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = welcomePageViewController.m; sourceTree = "<group>"; };
 		5D63616F1DE3E38E00463329 /* JudgeSummaryLJJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JudgeSummaryLJJ.h; sourceTree = "<group>"; };
 		5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JudgeSummaryLJJ.m; sourceTree = "<group>"; };
-		5DC946181DE3F3DC00991463 /* UIButton+ljjClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ljjClick.h"; sourceTree = "<group>"; };
-		5DC946191DE3F3DC00991463 /* UIButton+ljjClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ljjClick.m"; sourceTree = "<group>"; };
+		5D8741171DEE783A0051B903 /* UIButton+Submitting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Submitting.h"; sourceTree = "<group>"; };
+		5D8741181DEE783A0051B903 /* UIButton+Submitting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Submitting.m"; sourceTree = "<group>"; };
+		5D87411A1DEE7AE00051B903 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		5D87411B1DEE7AE00051B903 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		5D87411D1DEE7AF50051B903 /* UIButton+LXMImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LXMImagePosition.h"; sourceTree = "<group>"; };
+		5D87411E1DEE7AF50051B903 /* UIButton+LXMImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LXMImagePosition.m"; sourceTree = "<group>"; };
+		5D8741201DEE7B4D0051B903 /* UIButton+TouchAreaInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TouchAreaInsets.h"; sourceTree = "<group>"; };
+		5D8741211DEE7B4D0051B903 /* UIButton+TouchAreaInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TouchAreaInsets.m"; sourceTree = "<group>"; };
+		5D8741231DEE7B8D0051B903 /* UIButtonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonHeader.h; sourceTree = "<group>"; };
+		5D8741271DEE84090051B903 /* NSTimer+MAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+MAC.h"; sourceTree = "<group>"; };
+		5D8741281DEE84090051B903 /* NSTimer+MAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+MAC.m"; sourceTree = "<group>"; };
+		5D87412B1DEE86EC0051B903 /* NSDate+Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Mac.h"; sourceTree = "<group>"; };
+		5D87412C1DEE86EC0051B903 /* NSDate+Mac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Mac.m"; sourceTree = "<group>"; };
+		5D87412D1DEE86EC0051B903 /* NSDate+MacFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MacFormatter.h"; sourceTree = "<group>"; };
+		5D87412E1DEE86EC0051B903 /* NSDate+MacFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MacFormatter.m"; sourceTree = "<group>"; };
+		5D87412F1DEE86EC0051B903 /* NSDateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateHeader.h; sourceTree = "<group>"; };
+		5DC946181DE3F3DC00991463 /* UIButton+ljjClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+ljjClick.h"; path = "../UIButton+ljjClick.h"; sourceTree = "<group>"; };
+		5DC946191DE3F3DC00991463 /* UIButton+ljjClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+ljjClick.m"; path = "../UIButton+ljjClick.m"; sourceTree = "<group>"; };
 		7E1CB5046B3FEFF602D82EE8 /* Pods-shuoyeahProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shuoyeahProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shuoyeahProject/Pods-shuoyeahProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,14 +297,13 @@
 		140221FA1D49D99F0017C05F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5D87412A1DEE86EC0051B903 /* NSDate */,
+				5D8741261DEE84090051B903 /* NSTimer */,
+				5D8741241DEE82570051B903 /* UIimage */,
+				5D8741251DEE82570051B903 /* UIlabel */,
+				5D8741161DEE782C0051B903 /* button */,
 				140222FD1D49E9DC0017C05F /* CustomTextVeiw.h */,
 				140222FE1D49E9DC0017C05F /* CustomTextVeiw.m */,
-				14F649CF1DDD81F000DAB989 /* UILabel+ljjRich.h */,
-				14F649D01DDD81F000DAB989 /* UILabel+ljjRich.m */,
-				5DC946181DE3F3DC00991463 /* UIButton+ljjClick.h */,
-				5DC946191DE3F3DC00991463 /* UIButton+ljjClick.m */,
-				5D26090A1DE41B8B002A8B67 /* UIImageView+ljjSetImage.h */,
-				5D26090B1DE41B8B002A8B67 /* UIImageView+ljjSetImage.m */,
 				5D0639DF1DE2DC8600AFC18C /* ljjUrlWebViewController.h */,
 				5D0639E01DE2DC8600AFC18C /* ljjUrlWebViewController.m */,
 				140222AE1D49DB440017C05F /* myLjjTools.h */,
@@ -651,6 +673,63 @@
 			path = pictureBrowe;
 			sourceTree = "<group>";
 		};
+		5D8741161DEE782C0051B903 /* button */ = {
+			isa = PBXGroup;
+			children = (
+				5DC946181DE3F3DC00991463 /* UIButton+ljjClick.h */,
+				5DC946191DE3F3DC00991463 /* UIButton+ljjClick.m */,
+				5D87411A1DEE7AE00051B903 /* UIButton+Block.h */,
+				5D87411B1DEE7AE00051B903 /* UIButton+Block.m */,
+				5D8741201DEE7B4D0051B903 /* UIButton+TouchAreaInsets.h */,
+				5D8741211DEE7B4D0051B903 /* UIButton+TouchAreaInsets.m */,
+				5D87411D1DEE7AF50051B903 /* UIButton+LXMImagePosition.h */,
+				5D87411E1DEE7AF50051B903 /* UIButton+LXMImagePosition.m */,
+				5D8741171DEE783A0051B903 /* UIButton+Submitting.h */,
+				5D8741181DEE783A0051B903 /* UIButton+Submitting.m */,
+				5D8741231DEE7B8D0051B903 /* UIButtonHeader.h */,
+			);
+			path = button;
+			sourceTree = "<group>";
+		};
+		5D8741241DEE82570051B903 /* UIimage */ = {
+			isa = PBXGroup;
+			children = (
+				5D26090A1DE41B8B002A8B67 /* UIImageView+ljjSetImage.h */,
+				5D26090B1DE41B8B002A8B67 /* UIImageView+ljjSetImage.m */,
+			);
+			path = UIimage;
+			sourceTree = "<group>";
+		};
+		5D8741251DEE82570051B903 /* UIlabel */ = {
+			isa = PBXGroup;
+			children = (
+				14F649CF1DDD81F000DAB989 /* UILabel+ljjRich.h */,
+				14F649D01DDD81F000DAB989 /* UILabel+ljjRich.m */,
+			);
+			path = UIlabel;
+			sourceTree = "<group>";
+		};
+		5D8741261DEE84090051B903 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				5D8741271DEE84090051B903 /* NSTimer+MAC.h */,
+				5D8741281DEE84090051B903 /* NSTimer+MAC.m */,
+			);
+			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		5D87412A1DEE86EC0051B903 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				5D87412B1DEE86EC0051B903 /* NSDate+Mac.h */,
+				5D87412C1DEE86EC0051B903 /* NSDate+Mac.m */,
+				5D87412D1DEE86EC0051B903 /* NSDate+MacFormatter.h */,
+				5D87412E1DEE86EC0051B903 /* NSDate+MacFormatter.m */,
+				5D87412F1DEE86EC0051B903 /* NSDateHeader.h */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
 		951C1731FEB87F45B4A5E1FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,7 +872,9 @@
 				14F649D11DDD81F000DAB989 /* UILabel+ljjRich.m in Sources */,
 				140222EA1D49E66F0017C05F /* NSArray+MASAdditions.m in Sources */,
 				5D63616E1DE3DA0300463329 /* welcomePageViewController.m in Sources */,
+				5D87411C1DEE7AE00051B903 /* UIButton+Block.m in Sources */,
 				1444809E1DD167D000311C97 /* UIImage+ClipperExtends.m in Sources */,
+				5D8741291DEE84090051B903 /* NSTimer+MAC.m in Sources */,
 				1460CACF1D48B76500FDBAC1 /* ViewController.m in Sources */,
 				140222F51D49E84C0017C05F /* AdvertiseView.m in Sources */,
 				140222E21D49E66F0017C05F /* EaseBlankPageView.m in Sources */,
@@ -804,6 +885,7 @@
 				140222EC1D49E66F0017C05F /* View+MASAdditions.m in Sources */,
 				140222F41D49E84C0017C05F /* AdvertiseHelper.m in Sources */,
 				5D5A135E1DE56F7A00D5DEC9 /* CALayer+Cool.m in Sources */,
+				5D8741191DEE783A0051B903 /* UIButton+Submitting.m in Sources */,
 				5D5A139A1DE58FD800D5DEC9 /* MBProgressHUD.m in Sources */,
 				140222ED1D49E66F0017C05F /* ViewController+MASAdditions.m in Sources */,
 				140222A31D49DB200017C05F /* TAAnimatedDotView.m in Sources */,
@@ -813,9 +895,11 @@
 				140221F31D49B92E0017C05F /* myViewController.m in Sources */,
 				5DC9461A1DE3F3DC00991463 /* UIButton+ljjClick.m in Sources */,
 				140222A71D49DB200017C05F /* SDCycleScrollView.m in Sources */,
+				5D87411F1DEE7AF50051B903 /* UIButton+LXMImagePosition.m in Sources */,
 				140222A51D49DB200017C05F /* TAPageControl.m in Sources */,
 				5D5A135F1DE56F7A00D5DEC9 /* CoreLaunchCool.m in Sources */,
 				140222A61D49DB200017C05F /* SDCollectionViewCell.m in Sources */,
+				5D8741301DEE86EC0051B903 /* NSDate+Mac.m in Sources */,
 				140222B61D49E4C10017C05F /* UIView+Toast.m in Sources */,
 				140222B01D49DB440017C05F /* myLjjTools.m in Sources */,
 				140221FE1D49DA730017C05F /* HttpRequest.m in Sources */,
@@ -838,12 +922,14 @@
 				140222E71D49E66F0017C05F /* MASLayoutConstraint.m in Sources */,
 				140222B71D49E4C10017C05F /* UNToast.m in Sources */,
 				5D5A139B1DE58FD800D5DEC9 /* PhotoView.m in Sources */,
+				5D8741221DEE7B4D0051B903 /* UIButton+TouchAreaInsets.m in Sources */,
 				140222E61D49E66F0017C05F /* MASConstraintMaker.m in Sources */,
 				140222E91D49E66F0017C05F /* MASViewConstraint.m in Sources */,
 				1444809C1DD167D000311C97 /* HKViewController.m in Sources */,
 				140221ED1D49B8290017C05F /* GWNavC.m in Sources */,
 				5D5A13641DE56F7A00D5DEC9 /* CoreLaunchLite.m in Sources */,
 				5D5A13991DE58FD800D5DEC9 /* JZAlbumViewController.m in Sources */,
+				5D8741311DEE86EC0051B903 /* NSDate+MacFormatter.m in Sources */,
 				5D0639E11DE2DC8600AFC18C /* ljjUrlWebViewController.m in Sources */,
 				140222EB1D49E66F0017C05F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				140222A81D49DB200017C05F /* UIView+SDExtension.m in Sources */,

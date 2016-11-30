@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "AddressBook/ABAddressBook.h"
+#import "EventKit/EventKit.h"
+#import "AVFoundation/AVFoundation.h"
+#import "AssetsLibrary/AssetsLibrary.h"
 @interface JudgeSummaryLJJ : NSObject
 
 /**
@@ -75,4 +80,26 @@
  @return 是否有
  */
 + (BOOL)isAllNum:(NSString *)string;
+
+/**
+ 定位权限是否开启
+ */
+- (BOOL)applicationHasAccessToLocationData;
+
+/**
+ 通讯录访问权限是否开启
+ */
+- (BOOL)applicationhasAccessToAddressBook;
+
+/**
+ 相机权限是否开启
+ */
+- (BOOL)applicationHasAccessToCalendar;
+
+/**
+ 相册权限是否开启
+ */
+- (BOOL)applicationHasAccessToPhotosLibrary;
+
+
 @end

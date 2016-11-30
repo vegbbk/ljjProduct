@@ -122,4 +122,12 @@ typedef void(^trueBack)(NSString * ss);
 //-------------------------------------------------获取通讯录-----------------------
 
 +(NSMutableArray *)getMyPhoneBook;
+
+/**
+ *  直接拨打电话
+ *
+ *  @param phoneNum 电话号码
+ */
++ (void)directPhoneCallWithPhoneNum:(NSString *)phoneNum;
+
 @end
