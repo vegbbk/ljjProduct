@@ -120,8 +120,8 @@
 		140222A91D49DB320017C05F /* ScrollviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollviewCell.h; sourceTree = "<group>"; };
 		140222AA1D49DB320017C05F /* ScrollviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollviewCell.m; sourceTree = "<group>"; };
 		140222AB1D49DB320017C05F /* ScrollviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollviewCell.xib; sourceTree = "<group>"; };
-		140222AE1D49DB440017C05F /* myLjjTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myLjjTools.h; sourceTree = "<group>"; };
-		140222AF1D49DB440017C05F /* myLjjTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myLjjTools.m; sourceTree = "<group>"; };
+		140222AE1D49DB440017C05F /* myLjjTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myLjjTools.h; path = ../myLjjTools.h; sourceTree = "<group>"; };
+		140222AF1D49DB440017C05F /* myLjjTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myLjjTools.m; path = ../myLjjTools.m; sourceTree = "<group>"; };
 		140222B21D49E4C10017C05F /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		140222B31D49E4C10017C05F /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		140222B41D49E4C10017C05F /* UNToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNToast.h; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		14F649D01DDD81F000DAB989 /* UILabel+ljjRich.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+ljjRich.m"; path = "../UILabel+ljjRich.m"; sourceTree = "<group>"; };
 		16AFD638B4A51DD1E9F0206B /* Pods-shuoyeahProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shuoyeahProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-shuoyeahProject/Pods-shuoyeahProject.release.xcconfig"; sourceTree = "<group>"; };
 		429B8843A6E58EAACDE11682 /* Pods_shuoyeahProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shuoyeahProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D0639DF1DE2DC8600AFC18C /* ljjUrlWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ljjUrlWebViewController.h; sourceTree = "<group>"; };
-		5D0639E01DE2DC8600AFC18C /* ljjUrlWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ljjUrlWebViewController.m; sourceTree = "<group>"; };
+		5D0639DF1DE2DC8600AFC18C /* ljjUrlWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ljjUrlWebViewController.h; path = ../ljjUrlWebViewController.h; sourceTree = "<group>"; };
+		5D0639E01DE2DC8600AFC18C /* ljjUrlWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ljjUrlWebViewController.m; path = ../ljjUrlWebViewController.m; sourceTree = "<group>"; };
 		5D26090A1DE41B8B002A8B67 /* UIImageView+ljjSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ljjSetImage.h"; path = "../UIImageView+ljjSetImage.h"; sourceTree = "<group>"; };
 		5D26090B1DE41B8B002A8B67 /* UIImageView+ljjSetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ljjSetImage.m"; path = "../UIImageView+ljjSetImage.m"; sourceTree = "<group>"; };
 		5D26090E1DE42573002A8B67 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 		5D5A13981DE58FD800D5DEC9 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		5D63616C1DE3DA0300463329 /* welcomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = welcomePageViewController.h; sourceTree = "<group>"; };
 		5D63616D1DE3DA0300463329 /* welcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = welcomePageViewController.m; sourceTree = "<group>"; };
-		5D63616F1DE3E38E00463329 /* JudgeSummaryLJJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JudgeSummaryLJJ.h; sourceTree = "<group>"; };
-		5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JudgeSummaryLJJ.m; sourceTree = "<group>"; };
+		5D63616F1DE3E38E00463329 /* JudgeSummaryLJJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JudgeSummaryLJJ.h; path = ../JudgeSummaryLJJ.h; sourceTree = "<group>"; };
+		5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JudgeSummaryLJJ.m; path = ../JudgeSummaryLJJ.m; sourceTree = "<group>"; };
 		5D8741171DEE783A0051B903 /* UIButton+Submitting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Submitting.h"; sourceTree = "<group>"; };
 		5D8741181DEE783A0051B903 /* UIButton+Submitting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Submitting.m"; sourceTree = "<group>"; };
 		5D87411A1DEE7AE00051B903 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
@@ -297,6 +297,7 @@
 		140221FA1D49D99F0017C05F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5D8741321DEECF310051B903 /* LJJTOOLS */,
 				5D87412A1DEE86EC0051B903 /* NSDate */,
 				5D8741261DEE84090051B903 /* NSTimer */,
 				5D8741241DEE82570051B903 /* UIimage */,
@@ -304,12 +305,6 @@
 				5D8741161DEE782C0051B903 /* button */,
 				140222FD1D49E9DC0017C05F /* CustomTextVeiw.h */,
 				140222FE1D49E9DC0017C05F /* CustomTextVeiw.m */,
-				5D0639DF1DE2DC8600AFC18C /* ljjUrlWebViewController.h */,
-				5D0639E01DE2DC8600AFC18C /* ljjUrlWebViewController.m */,
-				140222AE1D49DB440017C05F /* myLjjTools.h */,
-				140222AF1D49DB440017C05F /* myLjjTools.m */,
-				5D63616F1DE3E38E00463329 /* JudgeSummaryLJJ.h */,
-				5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */,
 				140222A91D49DB320017C05F /* ScrollviewCell.h */,
 				140222AA1D49DB320017C05F /* ScrollviewCell.m */,
 				140222AB1D49DB320017C05F /* ScrollviewCell.xib */,
@@ -728,6 +723,19 @@
 				5D87412F1DEE86EC0051B903 /* NSDateHeader.h */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		5D8741321DEECF310051B903 /* LJJTOOLS */ = {
+			isa = PBXGroup;
+			children = (
+				5D0639DF1DE2DC8600AFC18C /* ljjUrlWebViewController.h */,
+				5D0639E01DE2DC8600AFC18C /* ljjUrlWebViewController.m */,
+				140222AE1D49DB440017C05F /* myLjjTools.h */,
+				140222AF1D49DB440017C05F /* myLjjTools.m */,
+				5D63616F1DE3E38E00463329 /* JudgeSummaryLJJ.h */,
+				5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */,
+			);
+			path = LJJTOOLS;
 			sourceTree = "<group>";
 		};
 		951C1731FEB87F45B4A5E1FC /* Frameworks */ = {

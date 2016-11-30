@@ -14,5 +14,5 @@
 @property (nonatomic) NSInteger integerValue;
 @property (nonatomic) BOOL boolValue;
 @property (nonatomic) float floatValue;
-- (NSDictionary *)setupDefaults;
+
 @end
