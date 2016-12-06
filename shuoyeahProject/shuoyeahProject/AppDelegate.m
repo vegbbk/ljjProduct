@@ -9,11 +9,13 @@
 #import "AppDelegate.h"
 #import "CoreLaunchLite.h"
 #import "CoreLaunchCool.h"
+#import "MMDrawerController.h"
 #import "baseTabBarViewController.h"
 #import "welcomePageViewController.h"
+#import "testSliderViewController.h"
 #import "IQKeyboardManager.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong) MMDrawerController * drawerController;
 @end
 
 @implementation AppDelegate
@@ -28,9 +30,19 @@
     self.window.backgroundColor = [UIColor whiteColor];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunched"]) {
     baseTabBarViewController * tab = [[baseTabBarViewController alloc]init];
-    self.window.rootViewController = tab;
+    //添加侧滑
+    testSliderViewController * test = [[testSliderViewController alloc]init];
+    self.drawerController = [[MMDrawerController alloc]
+                                 initWithCenterViewController:tab
+                                 leftDrawerViewController:test
+                                 rightDrawerViewController:nil];
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    self.window.rootViewController = self.drawerController;
     }else{
-   
     self.window.rootViewController =  [[welcomePageViewController alloc]init];
     }
     [self.window makeKeyAndVisible];

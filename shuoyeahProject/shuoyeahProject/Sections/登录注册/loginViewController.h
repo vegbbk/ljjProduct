@@ -10,4 +10,9 @@
 
 @interface loginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *accountTextField;//账号
+@property (weak, nonatomic) IBOutlet UITextField *passWordTextField;//密码
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;//登录
+- (IBAction)loginButtonAction:(UIButton *)sender;
+
 @end

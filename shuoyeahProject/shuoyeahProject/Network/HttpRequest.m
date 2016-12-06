@@ -9,6 +9,7 @@
 #import "HttpRequest.h"
 #import "AFURLSessionManager.h"
 #import "AFHTTPSessionManager.h"
+//#import "HttpClient.h"
 @implementation HttpRequest
 /**
  *  发送get请求
@@ -17,9 +18,7 @@
 {
     // 1.创建请求管理对象
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
     // 设置超时时间
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 12;
@@ -27,7 +26,6 @@
     [SVProgressHUD show];
     
     // 2.发送请求
-    
     [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         //这里可以获取进度
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -55,7 +53,7 @@
  *  发送POST请求
  */
 
-+ (void)postWithURL:(NSString *)url params:(NSMutableDictionary *)params success:(Success)success failure:(Failure)failure
++ (void)postWithURL:(NSString *)url params:(NSMutableDictionary *)params andNeedHub:(BOOL)isYES success:(Success)success failure:(Failure)failure
 {
     // 1.创建请求管理对象
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -65,8 +63,12 @@
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 12;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    // 2.发送请求
-   // [SVProgressHUD show];
+    // 2.加载框
+    if (isYES) {
+    [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    }
+    
    //  NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:params];
     [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
      //这里可以获取进度
@@ -76,11 +78,29 @@
     NSData *responseData1 = responseObject;
     NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseData1 options:NSJSONReadingMutableContainers error:nil];
        // [SVProgressHUD dismiss];
+        if([responseDict[@"Code"]integerValue]==-400){
+            
+            [SVProgressHUD showErrorWithStatus:@"账号或密码错误"];
+            
+        }else if([responseDict[@"Code"]integerValue]==-401){
+            
+            [SVProgressHUD showErrorWithStatus:@"APP账号已被冻结"];
+        }else if([responseDict[@"Code"]integerValue]==-402){
+            
+            [SVProgressHUD showErrorWithStatus:@"接口已关闭"];
+        }else if([responseDict[@"Code"]integerValue]==-404){
+            
+            [SVProgressHUD showErrorWithStatus:@"接口维护中"];
+        }else{
+            
+            if (isYES) {
+                [SVProgressHUD dismiss];
+            }
+            if (success) {
+            success(responseDict);
+            }
         
-    if (success) {
-        success(responseDict);
-    }
-  
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     
     //[SVProgressHUD dismiss];
@@ -91,10 +111,10 @@
         failure(error);
     }
 
-        
     }];
     
 }
+
 /**
  *  上传图片一张或多张
  */

@@ -11,7 +11,7 @@
 #import "HomeViewController.h"
 #import "myViewController.h"
 #import "loginViewController.h"
-
+#import "testSliderViewController.h"
 @interface baseTabBarViewController ()<UIAlertViewDelegate>
 {
     NSString *APPID;
@@ -24,18 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-     [self createTabBar];
-    
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentLoginAlert) name:presentLoginFlageMSG object:nil];
-    
+    [self createTabBar];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentLoginAlert) name:presentLoginViewMessage object:nil];
     [self checkNewAppVersion];
 }
 
 - (void)createTabBar
 {
+    
     HomeViewController * head = [[HomeViewController alloc]init];
     
     myViewController * my = [[myViewController alloc]init];
@@ -147,6 +143,7 @@
 
 - (void)checkNewAppVersion
 {
+    
     
 }
 

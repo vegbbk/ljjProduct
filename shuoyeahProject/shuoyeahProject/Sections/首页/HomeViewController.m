@@ -10,23 +10,30 @@
 #import "JZAlbumViewController.h"
 #import "UILabel+ljjRich.h"
 #import "UIButton+ljjClick.h"
+#import "testSliderViewController.h"
 #import "ljjUrlWebViewController.h"
+#import "UIViewController+MMDrawerController.h"
 #import "GVUserDefaults+ljjSaveUserData.h"
 @interface HomeViewController (){
 
     UIButton * button ;
 }
 @property (nonatomic,copy)NSString * string;
+
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = WHITEColor;
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     [dict setValue:nil forKey:@"key"];
     [dict setValue:@"123" forKey:@"ceshi"];
     DLog(@"%@",dict);
+      //[SVProgressHUD setInfoImage:nil];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+  //  [SVProgressHUD setBackgroundColor:BlackColor];
    // [[GVUserDefaults standardUserDefaults] ];
    // [[NSUserDefaults standardUserDefaults] registerDefaults:@{
 //                                                              @"userName": @"default11",
@@ -37,7 +44,7 @@
 //                                                              }];
 //测试苏大声道
 //  NSDictionary * dic = @{
-//      @"userName": @"刘建基",
+//      ;@"userName": @"刘建基",
 //      @"userId": @23,
 //      @"integerValue": @837802,
 //      @"boolValue": @YES,
@@ -57,15 +64,17 @@
     
     [label addTapGuester:YES with:^{
         [button endSubmitting];
+        [SVProgressHUD showInfoWithStatus:@"测试一下测试议案"];
+         [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     }];
      [self.view addSubview:label];
     
     button = [myLjjTools createButtonWithFrame:CGRectMake(100, 250, 140, 60) andTitle:@"发送验证码" andTitleFont:FONTSize(16) andTitleColor:BlackColor andBgColor:kThemeColor andSelecter:@selector(buttonClick:) andTarget:self andCornerRadius:4.0];
-    button.touchAreaInsets = UIEdgeInsetsMake(100, 100, 100, 100);
+    //button.touchAreaInsets = UIEdgeInsetsMake(100, 100, 100, 100);
     [self.view addSubview:button];
     
     
-    UITextField * textFiled = [myLjjTools createTextFieldFrame:CGRectMake(100, 300, 222, 40) andBgColor:BlackColor andPlaceholder:@"KUAIXIE" andTextColor:kThemeColor andTextFont:FONTSize(16) andReturnType:UIReturnKeyDone];
+    UITextField * textFiled = [myLjjTools createTextFieldFrame:CGRectMake(100, 300, 222, 40) andBgColor:WHITEColor andPlaceholder:@"KUAIXIE" andTextColor:kThemeColor andTextFont:FONTSize(16) andReturnType:UIReturnKeyDone];
     [self.view addSubview:textFiled];
     UITableView * tableView;
     tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

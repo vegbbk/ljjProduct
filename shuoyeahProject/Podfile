@@ -17,4 +17,5 @@ target :shuoyeahProject do
     pod “MJExtension”
     pod “SDWebImage”
     pod “SDWebImage”
+    pod 'MMDrawerController'
 end

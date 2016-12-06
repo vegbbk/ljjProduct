@@ -48,7 +48,7 @@ typedef void(^RequestFailedBlock)(NSInteger errorCode);
 /**
  *  发送POST请求
  */
-+ (void)postWithURL:(NSString *)url params:(NSMutableDictionary *)params success:(Success)success failure:(Failure)failure;
++ (void)postWithURL:(NSString *)url params:(NSMutableDictionary *)params andNeedHub:(BOOL)isYES success:(Success)success failure:(Failure)failure;
 
 /**
  *  上传一张或多张图片

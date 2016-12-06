@@ -7,6 +7,7 @@
 //
 
 #import "GWNavC.h"
+#import "UIViewController+MMDrawerController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 @interface GWNavC ()
 
@@ -28,6 +29,16 @@
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:18],NSFontAttributeName,nil]];
     
 }
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    if(self.mm_drawerController.showsStatusBarBackgroundView){
+        return UIStatusBarStyleLightContent;
+    }
+    else {
+        return UIStatusBarStyleDefault;
+    }
+}
+
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {

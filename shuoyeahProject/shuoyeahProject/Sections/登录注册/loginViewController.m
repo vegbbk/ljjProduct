@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"登录测试%@", [GVUserDefaults standardUserDefaults].userName);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -34,4 +35,17 @@
 }
 */
 
+- (IBAction)loginButtonAction:(UIButton *)sender {
+    [GVUserDefaults standardUserDefaults].userName = _accountTextField.text;
+    NSMutableDictionary * diction = [NSMutableDictionary dictionary];
+    
+    [HttpRequest postWithURL:@"" params:diction andNeedHub:YES success:^(id responseObject) {
+        
+        [GVUserDefaults standardUserDefaults].userName = _accountTextField.text;
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
 @end

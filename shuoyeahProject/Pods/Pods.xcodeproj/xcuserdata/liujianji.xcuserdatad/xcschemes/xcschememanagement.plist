@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MMDrawerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-shuoyeahProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4ADB20392F07CFACB741AC14DE45F37A</key>
+		<key>53D8921C7A155F8CFA693CDB677D2170</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A5B2F4DEB1CB2A5F97742DD49BB1EDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90DBFAD30DCEE5F70123E63088A4B6D1</key>
+		<key>A8FAB4675B15F8258B6C19B71077B859</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEEA7FAD72629EC9DABAD4EADD332C0C</key>
+		<key>B5AE1A700CA1032DA37E9F58AE29A5EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

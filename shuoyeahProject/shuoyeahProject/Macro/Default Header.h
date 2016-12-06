@@ -12,4 +12,6 @@
 #define defaultImgName  @"默认图片"
 
 #define defaultFailNet @"网络请求失败哦"
+//通知相关
+#define presentLoginViewMessage  @"presentLoginViewMessage"
 #endif /* Default_Header_h */
