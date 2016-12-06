@@ -18,4 +18,5 @@ target :shuoyeahProject do
     pod “SDWebImage”
     pod “SDWebImage”
     pod 'MMDrawerController'
+    pod 'DZNEmptyDataSet'
 end

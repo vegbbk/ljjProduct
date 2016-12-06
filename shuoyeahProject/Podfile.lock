@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.2)
   - AFNetworking/UIKit (3.0.2):
     - AFNetworking/NSURLSession
+  - DZNEmptyDataSet (1.7.2)
   - IQKeyboardManager (3.3.4)
   - MBProgressHUD (0.9.1)
   - MJExtension (3.0.7)
@@ -37,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - DZNEmptyDataSet
   - IQKeyboardManager
   - MBProgressHUD
   - MJExtension
@@ -47,6 +49,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 2f30b7db399a405b12b24e049c654f108fc8c54d
+  DZNEmptyDataSet: 0ec00bfc230d7450997b60c127afdd0b9f24f3b6
   IQKeyboardManager: ac803e61e5b50efae6b3aeedd95a02c7c7d3b2b3
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
@@ -55,6 +58,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-PODFILE CHECKSUM: ca9999c77e5fd32621301fb39d4075eb13b6569d
+PODFILE CHECKSUM: 788ea5609da383b21e5bf74918147eb51585c784
 
 COCOAPODS: 1.1.1

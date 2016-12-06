@@ -49,6 +49,16 @@
 #else
 #   define DLog(...)
 #endif
+//-----------------警告处理----------------
+#define SuppressPerformSelectorLeakWarning(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
+//-----------------警告处理----------------
+
 
 
 #import "myLjjTools.h"
@@ -60,6 +70,7 @@
 #import "MJExtension.h"
 #import "UIButtonHeader.h"
 #import "UILabel+ljjRich.h"
+#import "UIScrollView+EmptyDataSet.h"
 #import "GVUserDefaults+ljjSaveUserData.h"
 #import "UIImageView+ljjSetImage.h"
 #import "UIColor+HNExtensions.h"

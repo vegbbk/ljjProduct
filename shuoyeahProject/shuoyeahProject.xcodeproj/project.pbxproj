@@ -80,6 +80,7 @@
 		5D5F02721DF65734004B3615 /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F026C1DF65734004B3615 /* NSDictionary+HYBUnicodeReadable.m */; };
 		5D5F02731DF65734004B3615 /* NSObject+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F026E1DF65734004B3615 /* NSObject+HYBUnicodeReadable.m */; };
 		5D5F02741DF65734004B3615 /* NSSet+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F02701DF65734004B3615 /* NSSet+HYBUnicodeReadable.m */; };
+		5D5F02761DF68ACA004B3615 /* 测试测试.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5D5F02751DF68ACA004B3615 /* 测试测试.jpeg */; };
 		5D63616E1DE3DA0300463329 /* welcomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63616D1DE3DA0300463329 /* welcomePageViewController.m */; };
 		5D6361711DE3E38E00463329 /* JudgeSummaryLJJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6361701DE3E38E00463329 /* JudgeSummaryLJJ.m */; };
 		5D6EC7831DF00BCA00A0AA51 /* testSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EC7821DF00BCA00A0AA51 /* testSliderViewController.m */; };
@@ -239,6 +240,7 @@
 		5D5F026E1DF65734004B3615 /* NSObject+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
 		5D5F026F1DF65734004B3615 /* NSSet+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
 		5D5F02701DF65734004B3615 /* NSSet+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		5D5F02751DF68ACA004B3615 /* 测试测试.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "测试测试.jpeg"; sourceTree = "<group>"; };
 		5D63616C1DE3DA0300463329 /* welcomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = welcomePageViewController.h; sourceTree = "<group>"; };
 		5D63616D1DE3DA0300463329 /* welcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = welcomePageViewController.m; sourceTree = "<group>"; };
 		5D63616F1DE3E38E00463329 /* JudgeSummaryLJJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JudgeSummaryLJJ.h; path = ../JudgeSummaryLJJ.h; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 		1460CAE71D48B9E000FDBAC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5D5F02751DF68ACA004B3615 /* 测试测试.jpeg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140222AD1D49DB320017C05F /* ScrollviewCell.xib in Resources */,
+				5D5F02761DF68ACA004B3615 /* 测试测试.jpeg in Resources */,
 				140222E11D49E66F0017C05F /* blankpage_image_Sleep@3x.png in Resources */,
 				140222DD1D49E66F0017C05F /* blankpage_button_reload@2x.png in Resources */,
 				5D5A136F1DE570DA00D5DEC9 /* Assets.xcassets in Resources */,
