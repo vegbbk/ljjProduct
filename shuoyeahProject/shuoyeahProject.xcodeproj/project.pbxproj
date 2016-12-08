@@ -67,8 +67,10 @@
 		5D2609101DE42573002A8B67 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D26090F1DE42573002A8B67 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		5D26094A1DE4438B002A8B67 /* GVUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2609491DE4438B002A8B67 /* GVUserDefaults.m */; };
 		5D26094D1DE44677002A8B67 /* GVUserDefaults+ljjSaveUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D26094C1DE44677002A8B67 /* GVUserDefaults+ljjSaveUserData.m */; };
-		5D414DDF1DF148D7003727BE /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D414DDE1DF148D7003727BE /* MMExampleDrawerVisualStateManager.m */; };
 		5D414DE31DF16F3E003727BE /* NSString+ljjProStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D414DE21DF16F3E003727BE /* NSString+ljjProStr.m */; };
+		5D4B0D531DF8005D00C3D371 /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B0D521DF8005D00C3D371 /* NSObject+runtime.m */; };
+		5D4B0D581DF8066200C3D371 /* UIControl+zy_DelayClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B0D571DF8066200C3D371 /* UIControl+zy_DelayClick.m */; };
+		5D52DB301DF9528100ED0036 /* UIAlertView+LJJBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D52DB2F1DF9528100ED0036 /* UIAlertView+LJJBlock.m */; };
 		5D5A135E1DE56F7A00D5DEC9 /* CALayer+Cool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A13391DE56F7A00D5DEC9 /* CALayer+Cool.m */; };
 		5D5A135F1DE56F7A00D5DEC9 /* CoreLaunchCool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A133B1DE56F7A00D5DEC9 /* CoreLaunchCool.m */; };
 		5D5A13641DE56F7A00D5DEC9 /* CoreLaunchLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A13481DE56F7A00D5DEC9 /* CoreLaunchLite.m */; };
@@ -215,10 +217,14 @@
 		5D2609491DE4438B002A8B67 /* GVUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserDefaults.m; sourceTree = "<group>"; };
 		5D26094B1DE44677002A8B67 /* GVUserDefaults+ljjSaveUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+ljjSaveUserData.h"; sourceTree = "<group>"; };
 		5D26094C1DE44677002A8B67 /* GVUserDefaults+ljjSaveUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+ljjSaveUserData.m"; sourceTree = "<group>"; };
-		5D414DDD1DF148D7003727BE /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
-		5D414DDE1DF148D7003727BE /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		5D414DE11DF16F3E003727BE /* NSString+ljjProStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ljjProStr.h"; sourceTree = "<group>"; };
 		5D414DE21DF16F3E003727BE /* NSString+ljjProStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ljjProStr.m"; sourceTree = "<group>"; };
+		5D4B0D511DF8005D00C3D371 /* NSObject+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+runtime.h"; path = "../NSObject+runtime.h"; sourceTree = "<group>"; };
+		5D4B0D521DF8005D00C3D371 /* NSObject+runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+runtime.m"; path = "../NSObject+runtime.m"; sourceTree = "<group>"; };
+		5D4B0D561DF8066200C3D371 /* UIControl+zy_DelayClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+zy_DelayClick.h"; sourceTree = "<group>"; };
+		5D4B0D571DF8066200C3D371 /* UIControl+zy_DelayClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+zy_DelayClick.m"; sourceTree = "<group>"; };
+		5D52DB2E1DF9528100ED0036 /* UIAlertView+LJJBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LJJBlock.h"; sourceTree = "<group>"; };
+		5D52DB2F1DF9528100ED0036 /* UIAlertView+LJJBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LJJBlock.m"; sourceTree = "<group>"; };
 		5D5A13381DE56F7A00D5DEC9 /* CALayer+Cool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Cool.h"; sourceTree = "<group>"; };
 		5D5A13391DE56F7A00D5DEC9 /* CALayer+Cool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Cool.m"; sourceTree = "<group>"; };
 		5D5A133A1DE56F7A00D5DEC9 /* CoreLaunchCool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLaunchCool.h; sourceTree = "<group>"; };
@@ -292,8 +298,6 @@
 		140221E91D49B73F0017C05F /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				5D414DDD1DF148D7003727BE /* MMExampleDrawerVisualStateManager.h */,
-				5D414DDE1DF148D7003727BE /* MMExampleDrawerVisualStateManager.m */,
 				140221EE1D49B90D0017C05F /* HomeViewController.h */,
 				140221EF1D49B90D0017C05F /* HomeViewController.m */,
 				5D6EC7811DF00BCA00A0AA51 /* testSliderViewController.h */,
@@ -324,6 +328,9 @@
 		140221FA1D49D99F0017C05F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5D52DB2D1DF9523100ED0036 /* alertView */,
+				5D4B0D551DF8066200C3D371 /* UIControl */,
+				5D4B0D541DF8009000C3D371 /* NSobject */,
 				5D414DE01DF16EE7003727BE /* NSString */,
 				5D8741321DEECF310051B903 /* LJJTOOLS */,
 				5D87412A1DEE86EC0051B903 /* NSDate */,
@@ -656,6 +663,33 @@
 			path = NSString;
 			sourceTree = "<group>";
 		};
+		5D4B0D541DF8009000C3D371 /* NSobject */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B0D511DF8005D00C3D371 /* NSObject+runtime.h */,
+				5D4B0D521DF8005D00C3D371 /* NSObject+runtime.m */,
+			);
+			path = NSobject;
+			sourceTree = "<group>";
+		};
+		5D4B0D551DF8066200C3D371 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B0D561DF8066200C3D371 /* UIControl+zy_DelayClick.h */,
+				5D4B0D571DF8066200C3D371 /* UIControl+zy_DelayClick.m */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		5D52DB2D1DF9523100ED0036 /* alertView */ = {
+			isa = PBXGroup;
+			children = (
+				5D52DB2E1DF9528100ED0036 /* UIAlertView+LJJBlock.h */,
+				5D52DB2F1DF9528100ED0036 /* UIAlertView+LJJBlock.m */,
+			);
+			path = alertView;
+			sourceTree = "<group>";
+		};
 		5D5A13351DE56F6200D5DEC9 /* threePart */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,7 +979,6 @@
 				1460CAD51D48B76500FDBAC1 /* shuoyeahProject.xcdatamodeld in Sources */,
 				1444809F1DD167D000311C97 /* UIBarButtonItem+Extends.m in Sources */,
 				5D5F02731DF65734004B3615 /* NSObject+HYBUnicodeReadable.m in Sources */,
-				5D414DDF1DF148D7003727BE /* MMExampleDrawerVisualStateManager.m in Sources */,
 				5D26090C1DE41B8B002A8B67 /* UIImageView+ljjSetImage.m in Sources */,
 				144480A01DD167D000311C97 /* UIImage+Extends.m in Sources */,
 				140222EC1D49E66F0017C05F /* View+MASAdditions.m in Sources */,
@@ -961,6 +994,8 @@
 				140221F31D49B92E0017C05F /* myViewController.m in Sources */,
 				5DC9461A1DE3F3DC00991463 /* UIButton+ljjClick.m in Sources */,
 				140222A71D49DB200017C05F /* SDCycleScrollView.m in Sources */,
+				5D52DB301DF9528100ED0036 /* UIAlertView+LJJBlock.m in Sources */,
+				5D4B0D531DF8005D00C3D371 /* NSObject+runtime.m in Sources */,
 				5D87411F1DEE7AF50051B903 /* UIButton+LXMImagePosition.m in Sources */,
 				140222A51D49DB200017C05F /* TAPageControl.m in Sources */,
 				5D5A135F1DE56F7A00D5DEC9 /* CoreLaunchCool.m in Sources */,
@@ -968,6 +1003,7 @@
 				5D8741301DEE86EC0051B903 /* NSDate+Mac.m in Sources */,
 				140222B61D49E4C10017C05F /* UIView+Toast.m in Sources */,
 				140222B01D49DB440017C05F /* myLjjTools.m in Sources */,
+				5D4B0D581DF8066200C3D371 /* UIControl+zy_DelayClick.m in Sources */,
 				140221FE1D49DA730017C05F /* HttpRequest.m in Sources */,
 				1460CAE41D48B7FF00FDBAC1 /* baseTabBarViewController.m in Sources */,
 				140222E51D49E66F0017C05F /* MASConstraint.m in Sources */,

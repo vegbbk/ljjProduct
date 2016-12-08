@@ -42,7 +42,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return 10;
+    return 0;
 
 }
 
@@ -66,6 +66,9 @@
 {
     return [UIColor whiteColor];
 }
+
+
+
 //返回标题文字
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
@@ -75,7 +78,8 @@
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView{ NSString *text = @"This allows you to share photos from your library and save photos to your camera roll."; NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new]; paragraph.lineBreakMode = NSLineBreakByWordWrapping; paragraph.alignment = NSTextAlignmentCenter; NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14.0f], NSForegroundColorAttributeName: [UIColor lightGrayColor], NSParagraphStyleAttributeName: paragraph}; return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 //返回可以点击的按钮 上面带文字
-- (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state{ NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17.0f]}; return [[NSAttributedString alloc] initWithString:@"Continue" attributes:attributes];
+- (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state{ NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17.0f]};
+    return [[NSAttributedString alloc] initWithString:@"Continue" attributes:attributes];
 }
 //点击button
 - (void)emptyDataSetDidTapButton:(UIScrollView *)scrollView{ // Do something

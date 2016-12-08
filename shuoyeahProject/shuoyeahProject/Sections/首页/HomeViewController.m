@@ -33,6 +33,21 @@
     DLog(@"%@",dict);
       //[SVProgressHUD setInfoImage:nil];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"tishi" message:@"xinxi1" delegate:self cancelButtonTitle:@"fou" otherButtonTitles:@"SHI",nil];
+    [alert show];
+    
+    [alert ljj_clickedButtonAtIndexWithBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+        
+        if (buttonIndex==0) {
+            
+            NSLog(@"gun");
+        }else{
+        
+            NSLog(@"hshhshshs");
+        }
+        
+    }];
   //  [SVProgressHUD setBackgroundColor:BlackColor];
    // [[GVUserDefaults standardUserDefaults] ];
    // [[NSUserDefaults standardUserDefaults] registerDefaults:@{
