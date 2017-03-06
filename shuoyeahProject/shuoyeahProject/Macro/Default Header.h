@@ -14,4 +14,10 @@
 #define defaultFailNet @"网络请求失败哦"
 //通知相关
 #define presentLoginViewMessage  @"presentLoginViewMessage"
+
+//APP系统字体大小统一管理
+#define fontSizeLJJ 15
+
+
+
 #endif /* Default_Header_h */

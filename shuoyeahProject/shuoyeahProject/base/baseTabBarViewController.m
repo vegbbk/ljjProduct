@@ -65,7 +65,7 @@
         
         nav.tabBarItem.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-         [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:kThemeColor} forState:UIControlStateSelected];
+         [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:LThemeColor} forState:UIControlStateSelected];
 
         
     }

@@ -38,7 +38,7 @@
                                  rightDrawerViewController:nil];
     [self.drawerController setShowsShadow:NO];
     [self.drawerController setRestorationIdentifier:@"MMDrawer"];
-    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setMaximumLeftDrawerWidth:100.0];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     self.window.rootViewController = self.drawerController;
@@ -46,11 +46,12 @@
     self.window.rootViewController =  [[welcomePageViewController alloc]init];
     }
     [self.window makeKeyAndVisible];
-    [CoreLaunchLite animWithWindow:self.window image:nil];
+   // [CoreLaunchLite animWithWindow:self.window image:nil];
     //避免在一个界面上同时点击多个button
     [[UIButton appearance] setExclusiveTouch:YES];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

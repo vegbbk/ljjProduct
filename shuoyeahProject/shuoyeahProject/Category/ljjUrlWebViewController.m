@@ -8,7 +8,7 @@
 
 #import "ljjUrlWebViewController.h"
 
-@interface ljjUrlWebViewController ()
+@interface ljjUrlWebViewController ()<UIWebViewDelegate>
 @property (nonatomic,strong)UIWebView * webView;
 @end
 
@@ -16,26 +16,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.url = @"http://211.167.76.180:9988/apicenter/?audioId=fdeae346-bf4c-4508-ab3a-d1675aa9273e&userId=1aed9de8-c37b-4924-85ea-4d3f99a9b78f";
+    self.url = @"http://www.china2wheels.com/c2w/14/index.html";
     self.view.backgroundColor = WHITEColor;
     _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0,0, self.view.bounds.size.width, self.view.bounds.size.height)];
+  //  _webView.delegate = self;
     [self.view addSubview:_webView];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURLRequest * request;
-       
-    NSString * encodingString = [_url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        request = [NSURLRequest requestWithURL:[NSURL URLWithString:encodingString]];
-               //回到主线程刷新UI
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //将请求加载到WebView上
-            [_webView loadRequest:request];
-            
-        });
-    });
-
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSURLRequest * request;
+//
+//    NSString * encodingString = [_url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        request = [NSURLRequest requestWithURL:[NSURL URLWithString:encodingString]];
+//               //回到主线程刷新UI
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            //将请求加载到WebView上
+//            [_webView loadRequest:request];
+//            
+//        });
+//    });
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+    NSString * path = [cachesPath stringByAppendingString:[NSString stringWithFormat:@"/Caches/%lu.html",(unsigned)[_url hash]]];
+    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    if (!(htmlString ==nil || [htmlString isEqualToString:@""])) {
+        [_webView loadHTMLString:htmlString baseURL:[NSURL URLWithString:_url]];
+    }else{
+        NSURL *url = [NSURL URLWithString:_url];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [_webView loadRequest:request];
+        [self writeToCache];
+    }
     // Do any additional setup after loading the view.
 }
+/**
+ * 网页缓存写入文件
+ */
+- (void)writeToCache
+{
+    NSString * htmlResponseStr = [NSString stringWithContentsOfURL:[NSURL URLWithString:_url]encoding:NSUTF8StringEncoding error:Nil];
+    //创建文件管理器
+    NSFileManager *fileManager = [[NSFileManager alloc]init];
+    //获取document路径
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,      NSUserDomainMask, YES) objectAtIndex:0];
+    [fileManager createDirectoryAtPath:[cachesPath stringByAppendingString:@"/Caches"]withIntermediateDirectories:YES attributes:nil error:nil];
+    //写入路径
+    NSString * path = [cachesPath stringByAppendingString:[NSString stringWithFormat:@"/Caches/%lu.html",(unsigned)[_url hash]]];
+    
+    [htmlResponseStr writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+}
+//- (void)webViewDidFinishLoad:(UIWebView *)webView{
+//    
+//    NSLog(@"测试是是是是是是");
+//
+//}
 
+//
+//-(void)dealloc{
+//
+// [_webView loadRequest:nil];
+//}
+//
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -20,7 +20,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    
+    [super awakeFromNib];
 }
 
 -(void)setImgUrlArray:(NSArray *)imgUrlArray{
@@ -28,6 +28,7 @@
     [self loading];
 }
 -(void)loading{
+    
     CGFloat scrollviewH=SCREEN_HEIGHT<568?120:120*SCREEN_HEIGHT/568;
     _scrollview=[SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, scrollviewH) imageURLStringsGroup:_imgUrlArray];
     _scrollview.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
@@ -40,6 +41,7 @@
         _scrollview.autoScroll=NO;
     }
     [self.MyBgView addSubview:_scrollview];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

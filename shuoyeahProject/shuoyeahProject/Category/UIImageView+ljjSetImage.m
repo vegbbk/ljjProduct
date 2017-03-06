@@ -11,6 +11,9 @@
 
 -(void)setImageViewWithNameStr:(NSString *)nameString{
 
-    [self sd_setImageWithURL:[NSURL URLWithString:nameString] placeholderImage:[UIImage imageNamed:@""]];
+    [self sd_setImageWithURL:[NSURL URLWithString:nameString] placeholderImage:[UIImage imageNamed:defaultImgName]];
 }
+
+
+
 @end

@@ -19,7 +19,8 @@
         dispatch_source_set_event_handler(_timer, ^{
             if(timeout<=0){
                 //倒计时结束，关闭
-                dispatch_source_cancel(_timer); dispatch_async(dispatch_get_main_queue(), ^{
+                dispatch_source_cancel(_timer);
+                dispatch_async(dispatch_get_main_queue(), ^{
                     // 设置界面的按钮显示 根据自己需求设置
                     [self setTitle:@"发送验证码" forState:UIControlStateNormal];
                     self.userInteractionEnabled = YES;

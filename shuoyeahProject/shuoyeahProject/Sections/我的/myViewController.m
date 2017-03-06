@@ -7,8 +7,12 @@
 //
 
 #import "myViewController.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+@interface myViewController ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>{
 
-@interface myViewController ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
+    NSArray * arr;
+
+}
 @property (nonatomic,strong)UITableView * tableView;
 @end
 
@@ -16,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    arr = @[@"爱的是打算的撒的啊按所大所大所大所多的撒大大撒多的撒打算打算打算打算的的撒打算大所大所多的撒打算大所大所多撒大所多",@"是打算的撒打算打算打算打算打算打算的撒大大的",@"按时打算法萨芬撒西安市西安市西安市小飒飒小撒打算的撒打算的撒的"];
     [self createTable];
     // Do any additional setup after loading the view.
 }
@@ -31,6 +35,15 @@
    // [self.tableView registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:@""];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
+ //   _tableView.mj_header
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //        _PageIndex=1;
+        //        [weakSelf loadData:YES];
+    }];
+    _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        //        _PageIndex++;
+        //        [weakSelf loadData:NO];
+    }];
 
 }
 
@@ -40,18 +53,36 @@
 
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return [tableView fd_heightForCellWithIdentifier:@"cell" configuration:^(UITableViewCell *cell) {
+        [self configureCell:cell atIndexPath:indexPath];
+    }];
+
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return 0;
+    return arr.count;
 
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"测试一下";
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    [self configureCell:cell atIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
+    if (indexPath.row % 2 == 0) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    cell.textLabel.numberOfLines = 0;
+     cell.textLabel.text = arr[indexPath.row];
 }
 
 #pragma mark ---------DZNEmptyDataSetSource------

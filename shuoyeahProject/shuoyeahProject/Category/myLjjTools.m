@@ -16,28 +16,22 @@
  按钮
  ===============================================================
  */
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andImage:(UIImage *)image andBgImage:(UIImage *)bgImage andSelecter:(SEL)sel andTarget:(id)target
++ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andSelecter:(SEL)sel andTarget:(id)target
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     if (titleColor) {
         [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    }if (titleFont) {
-        [btn.titleLabel setFont:titleFont];
     }
-    if (bgColor) {
-        [btn setBackgroundColor:bgColor];
-    }
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:fontSizeLJJ]];
+
     if (rect.size.width) {
         btn.frame = rect;
     }
     if (title) {
         [btn setTitle:title forState:UIControlStateNormal];
     }
-    if (image) {
-        [btn setImage:image forState:UIControlStateNormal];
-    }
-    if (bgImage) {
-        [btn setBackgroundImage:bgImage forState:UIControlStateNormal];
+    if (bgColor) {
+        [btn setBackgroundColor:bgColor];
     }
     if (sel) {
         [btn addTarget:target action:sel forControlEvents:UIControlEventTouchUpInside];
@@ -45,19 +39,33 @@
     return btn;
 }
 
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andImage:(UIImage *)image andBgImage:(UIImage *)bgImage andSelecter:(SEL)sel andTarget:(id)target andCornerRadius:(CGFloat)corner
++ (UIButton *)createButtonWithFrame:(CGRect)rect andImage:(UIImage *)image andSelecter:(SEL)sel andTarget:(id)target{
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    if (rect.size.width) {
+        btn.frame = rect;
+    }
+    if (image) {
+        [btn setImage:image forState:UIControlStateNormal];
+    }
+    if (sel) {
+        [btn addTarget:target action:sel forControlEvents:UIControlEventTouchUpInside];
+    }
+    return btn;
+    
+}
+
+
++ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleColor:(UIColor *)titleColor andImage:(UIImage *)image  andSelecter:(SEL)sel andTarget:(id)target andBgColor:(UIColor *)bgColor
 
 {
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     if (titleColor) {
         [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    }if (titleFont) {
-        [btn.titleLabel setFont:titleFont];
     }
-    if (bgColor) {
-        [btn setBackgroundColor:bgColor];
-    }
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:fontSizeLJJ]];
     if (rect.size.width) {
         btn.frame = rect;
     }
@@ -67,92 +75,11 @@
     if (image) {
         [btn setImage:image forState:UIControlStateNormal];
     }
-    if (bgImage) {
-        [btn setBackgroundImage:bgImage forState:UIControlStateNormal];
-    }
     if (sel) {
         [btn addTarget:target action:sel forControlEvents:UIControlEventTouchUpInside];
-    }
-    if (corner) {
-        [btn.layer setCornerRadius:corner];
-        [btn.layer setMasksToBounds:YES];
-    }
-    return btn;
-}
-
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andImage:(UIImage *)image andBgImage:(UIImage *)bgImage andSelecter:(SEL)sel andTarget:(id)target andforState:(UIControlState)state andStateTitle:(NSString *)stateTitle andStateTitleColor:(UIColor *)stateTitleColor andStateImage:(UIImage *)stateImage andStateBgImage:(UIImage *)stateBgImage andCornerRadius:(CGFloat)corner
-{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    if (titleColor) {
-        [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    }
-    if (titleFont) {
-        [btn.titleLabel setFont:titleFont];
     }
     if (bgColor) {
         [btn setBackgroundColor:bgColor];
-    }
-    if (rect.size.width) {
-        btn.frame = rect;
-    }
-    if (title) {
-        [btn setTitle:title forState:UIControlStateNormal];
-    }
-    if (image) {
-        [btn setImage:image forState:UIControlStateNormal];
-    }
-    if (bgImage) {
-        [btn setBackgroundImage:bgImage forState:UIControlStateNormal];
-    }
-    if (stateTitle) {
-        [btn setTitle:stateTitle forState:state];
-    }
-    if (stateTitleColor) {
-        [btn setTitleColor:stateTitleColor forState:state];
-    }
-    if (stateImage) {
-        [btn setImage:image forState:state];
-    }
-    if (stateBgImage) {
-        [btn setBackgroundImage:bgImage forState:state];
-    }
-    
-    if (sel) {
-        [btn addTarget:target action:sel forControlEvents:UIControlEventTouchUpInside];
-    }
-    if (corner) {
-        [btn.layer setCornerRadius:corner];
-        [btn.layer setMasksToBounds:YES];
-    }
-    return btn;
-}
-
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor  andSelecter:(SEL)sel andTarget:(id)target andCornerRadius:(CGFloat)corner
-{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    if (titleColor) {
-        [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    }
-    if (titleFont) {
-        [btn.titleLabel setFont:titleFont];
-    }
-    if (bgColor) {
-        [btn setBackgroundColor:bgColor];
-    }
-    if (rect.size.width) {
-        btn.frame = rect;
-    }
-    if (title) {
-        [btn setTitle:title forState:UIControlStateNormal];
-    }
-    if (sel) {
-        [btn addTarget:target action:sel forControlEvents:UIControlEventTouchUpInside];
-    }
-    if (corner) {
-        [btn.layer setCornerRadius:corner];
-        [btn.layer setMasksToBounds:YES];
-        [btn.layer setShouldRasterize:YES];
-        btn.layer.rasterizationScale = [UIScreen mainScreen].scale;
     }
     return btn;
 }
@@ -162,7 +89,7 @@
  label
  ===================================================================
  */
-+(UILabel *)createLabelWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andTextAlignment:(NSTextAlignment)alignment  andBgColor:(UIColor *)bgColor{
++(UILabel *)createLabelWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andTextAlignment:(NSTextAlignment)alignment andBgColor:(UIColor *)bgColor{
     
     UILabel * label = [[UILabel alloc]init];
     if (rect.size.width) {
@@ -408,7 +335,7 @@
     return textField;
     
 }
-+(UITextField *)createTextFieldFrame:(CGRect)rect andBgColor:(UIColor *)bgColor andPlaceholder:(NSString *)placeholder andTextColor:(UIColor *)textColor andTextFont:(UIFont * )font andReturnType:(UIReturnKeyType)returnType{
++(UITextField *)createTextFieldFrame:(CGRect)rect andPlaceholder:(NSString *)placeholder andTextColor:(UIColor *)textColor andTextFont:(UIFont * )font andReturnType:(UIReturnKeyType)returnType{
     
     UITextField *textField = [[UITextField alloc]init];
     if (rect.size.width) {
@@ -631,6 +558,31 @@
 + (void)directPhoneCallWithPhoneNum:(NSString *)phoneNum {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNum]]];
+}
+
++(void)loadShakeAnimationForView:(UIView*)view
+{
+    CALayer *lbl = [view layer];
+    CGPoint posLbl = [lbl position];
+    CGPoint y = CGPointMake(posLbl.x-10, posLbl.y);
+    CGPoint x = CGPointMake(posLbl.x+10, posLbl.y);
+    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    [animation setTimingFunction:[CAMediaTimingFunction
+                                  functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [animation setFromValue:[NSValue valueWithCGPoint:x]];
+    [animation setToValue:[NSValue valueWithCGPoint:y]];
+    [animation setAutoreverses:YES];
+    [animation setDuration:0.08];
+    [animation setRepeatCount:3];
+    [lbl addAnimation:animation forKey:nil];
+}
+
+- (void)roundingCorners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius with:(UIView*)setView{
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:setView.bounds byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+    layer.frame = setView.bounds;
+    layer.path = path.CGPath;
+    setView.layer.mask = layer;
 }
 
 @end

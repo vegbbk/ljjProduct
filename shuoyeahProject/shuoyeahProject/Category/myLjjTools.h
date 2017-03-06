@@ -34,30 +34,26 @@ typedef void(^trueBack)(NSString * ss);
  按钮
  ==================================
  */
-/**基本按钮*/
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andImage:(UIImage *)image andBgImage:(UIImage *)bgImage andSelecter:(SEL)sel andTarget:(id)target;
-/**切圆角按钮*/
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andImage:(UIImage *)image andBgImage:(UIImage *)bgImage andSelecter:(SEL)sel andTarget:(id)target andCornerRadius:(CGFloat)corner;
-/**选择按钮*/
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andImage:(UIImage *)image andBgImage:(UIImage *)bgImage andSelecter:(SEL)sel andTarget:(id)target andforState:(UIControlState)state andStateTitle:(NSString *)stateTitle andStateTitleColor:(UIColor *)stateTitleColor andStateImage:(UIImage *)stateImage andStateBgImage:(UIImage *)stateBgImage andCornerRadius:(CGFloat)corner;
-/***简化按钮*/
-+ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor  andSelecter:(SEL)sel andTarget:(id)target andCornerRadius:(CGFloat)corner;
+/**基本按钮无图*/
++ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleColor:(UIColor *)titleColor andBgColor:(UIColor *)bgColor andSelecter:(SEL)sel andTarget:(id)target;
+/**基本按钮图*/
++ (UIButton *)createButtonWithFrame:(CGRect)rect andImage:(UIImage *)image andSelecter:(SEL)sel andTarget:(id)target;
+/**按钮带图文字*/
++ (UIButton *)createButtonWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleColor:(UIColor *)titleColor andImage:(UIImage *)image  andSelecter:(SEL)sel andTarget:(id)target andBgColor:(UIColor *)bgColor;
 /*
  ================================================
  label
  ================================================
  */
 /**基本label*/
-+(UILabel *)createLabelWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andTextAlignment:(NSTextAlignment)alignment  andBgColor:(UIColor *)bgColor;
++(UILabel *)createLabelWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andTextAlignment:(NSTextAlignment)alignment andBgColor:(UIColor *)bgColor;
 /**行数 文字大小 自适应label高度*/
 +(UILabel *)createLabelWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andTextAlignment:(NSTextAlignment)alignment  andBgColor:(UIColor *)bgColor andLines:(NSInteger)numberOfLines andAdjustsFontSizeToFiWidth:(BOOL)sizeBool;
 /** 自适应文字高度*/
 +(UILabel *)createLabelWithFrame:(CGRect)rect andTitle:(NSString *)title andTitleFont:(UIFont *)titleFont andTitleColor:(UIColor *)titleColor andTextAlignment:(NSTextAlignment)alignment  andBgColor:(UIColor *)bgColor andCGSizeWIDTH:(CGFloat )width;
 /** label内容颜色不一样*/
-
 +(UILabel *)createLabelTextWithView:(UILabel *)label andwithChangeColorTxt:(NSString *)string withColor:(UIColor *)color;
 /** 计算文本内容高度*/
-
 +(CGSize)countTxtWith:(NSString *)text andWithFont:(UIFont *)font with:(CGFloat)width;
 
 /*
@@ -103,7 +99,7 @@ typedef void(^trueBack)(NSString * ss);
 /**
  简化输入框
  */
-+(UITextField *)createTextFieldFrame:(CGRect)rect andBgColor:(UIColor *)bgColor andPlaceholder:(NSString *)placeholder andTextColor:(UIColor *)textColor andTextFont:(UIFont * )font andReturnType:(UIReturnKeyType)returnType;
++(UITextField *)createTextFieldFrame:(CGRect)rect andPlaceholder:(NSString *)placeholder andTextColor:(UIColor *)textColor andTextFont:(UIFont * )font andReturnType:(UIReturnKeyType)returnType;
 /**
  *  消息提醒
  *
@@ -129,5 +125,24 @@ typedef void(^trueBack)(NSString * ss);
  *  @param phoneNum 电话号码
  */
 + (void)directPhoneCallWithPhoneNum:(NSString *)phoneNum;
+
+/**
+ 控件横向抖动
+
+ @param view 要抖动的控件
+ */
++(void)loadShakeAnimationForView:(UIView*)view;
+/**
+ 设置圆角
+ 
+ @param corners  UIRectCornerTopLeft     = 1 << 0,
+ UIRectCornerTopRight    = 1 << 1,
+ UIRectCornerBottomLeft  = 1 << 2,
+ UIRectCornerBottomRight = 1 << 3,
+ UIRectCornerAllCorners  = ~0UL
+ 
+ @param cornerRadius float
+ */
+- (void)roundingCorners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius with:(UIView*)setView;
 
 @end

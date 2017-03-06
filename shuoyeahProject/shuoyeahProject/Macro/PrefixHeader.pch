@@ -20,7 +20,7 @@
 #define iOS9 ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0)
 //字体
 #define LCGRCT(x,y,width,height) CGRectMake(x, y, width, height)
-#define FONTSize(size) [UIFont systemFontOfSize:size]
+#define FontSize(size) [UIFont systemFontOfSize:size]
 #define BoldFontSize(size) [UIFont boldSystemFontOfSize:size]
 //Get the OS version.       判断操作系统版本
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
@@ -35,20 +35,56 @@
 #define CLEARCOLOR [UIColor clearColor]
 #define BlackColor [UIColor blackColor]
 
+#define FONTONE 15
 //项目主色调
-#define kThemeColor  [UIColor colorForHexString:@"#ffaa46"]
+#define LThemeColor  [UIColor colorForHexString:@"#ffaa46"]
 //----------------------SOMETHING ELSE 其他 ----------------------------
 #define intToStr(S)    [NSString stringWithFormat:@"%d",S]
+#define unKnowToStr(S)    [NSString stringWithFormat:@"%@",S]
 //字符串是否为空
 #define IsStrEmpty(_ref)        (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
 //数组是否为空
 #define IsArrEmpty(_ref)        ((![_ref isKindOfClass:[NSArray class]])||((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
+//判断字典是否为空
+#define kDictionaryIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+
+#define WEAKSELF __weak typeof(self)weakSelf = self;
 
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #   define DLog(...)
 #endif
+
+/**
+ *  the saving objects      存储对象
+ *
+ *  @param __VALUE__ V
+ *  @param __KEY__   K
+ *
+ *  @return
+ */
+#define UserDefaultSetObjectForKey(__VALUE__,__KEY__) \
+{\
+[[NSUserDefaults standardUserDefaults] setObject:__VALUE__ forKey:__KEY__];\
+[[NSUserDefaults standardUserDefaults] synchronize];\
+}
+
+/**
+ *  get the saved objects       获得存储的对象
+ */
+#define UserDefaultObjectForKey(__KEY__)  [[NSUserDefaults standardUserDefaults] objectForKey:__KEY__]
+
+/**
+ *  delete objects      删除对象
+ */
+#define UserDefaultRemoveObjectForKey(__KEY__) \
+{\
+[[NSUserDefaults standardUserDefaults] removeObjectForKey:__KEY__];\
+[[NSUserDefaults standardUserDefaults] synchronize];\
+}
+
+
 //-----------------警告处理----------------
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \
@@ -70,6 +106,8 @@ _Pragma("clang diagnostic pop") \
 #import "MJExtension.h"
 #import "UIButtonHeader.h"
 #import "UILabel+ljjRich.h"
+#import "JudgeSummaryLJJ.h"
+#import "textFieldLJJView.h"
 #import "UIAlertView+LJJBlock.h"
 #import "UIControl+zy_DelayClick.h"
 #import "UIScrollView+EmptyDataSet.h"

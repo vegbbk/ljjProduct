@@ -16,4 +16,6 @@
  @param nameString 图片地址
  */
 -(void)setImageViewWithNameStr:(NSString *)nameString;
+
+
 @end

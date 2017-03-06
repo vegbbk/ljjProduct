@@ -7,7 +7,7 @@
 //
 
 #import "loginViewController.h"
-
+#import "UserModel.h"
 @interface loginViewController ()
 
 @end
@@ -36,16 +36,17 @@
 */
 
 - (IBAction)loginButtonAction:(UIButton *)sender {
+    
     [GVUserDefaults standardUserDefaults].userName = _accountTextField.text;
     NSMutableDictionary * diction = [NSMutableDictionary dictionary];
     
-    [HttpRequest postWithURL:@"" params:diction andNeedHub:YES success:^(id responseObject) {
-        
-        [GVUserDefaults standardUserDefaults].userName = _accountTextField.text;
-        
-    } failure:^(NSError *error) {
-        
-    }];
+//    [HttpRequest postWithURL:@"" params:diction andNeedHub:YES success:^(id responseObject) {
+//        
+//        [GVUserDefaults standardUserDefaults].userName = _accountTextField.text;
+//        UserModel * model = [NSKeyedArchiver archivedDataWithRootObject:]
+//    } failure:^(NSError *error) {
+//        
+//    }];
     
 }
 @end

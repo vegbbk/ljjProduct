@@ -41,9 +41,7 @@
     CGSize maxSize = CGSizeMake(self.placeholderLabel.frame.size.width, MAXFLOAT);
     float height = [self.customPlaceholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.placeholderLabel.font} context:nil].size.height;
     self.placeholderLabel.frame = CGRectMake(5, 8, self.frame.size.width - 10, height);
-
 }
-
 -(void)setCustomPlaceholder:(NSString *)customPlaceholder{
     _customPlaceholder = customPlaceholder;
     self.placeholderLabel.text = customPlaceholder;
@@ -72,6 +70,7 @@
 }
 
 - (void)dealloc{
+    
     [[NSNotificationCenter defaultCenter] removeObserver:UITextViewTextDidChangeNotification];
 
 }

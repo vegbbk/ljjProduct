@@ -79,17 +79,12 @@
     NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseData1 options:NSJSONReadingMutableContainers error:nil];
        // [SVProgressHUD dismiss];
         if([responseDict[@"Code"]integerValue]==-400){
-            
             [SVProgressHUD showErrorWithStatus:@"账号或密码错误"];
-            
         }else if([responseDict[@"Code"]integerValue]==-401){
-            
             [SVProgressHUD showErrorWithStatus:@"APP账号已被冻结"];
         }else if([responseDict[@"Code"]integerValue]==-402){
-            
             [SVProgressHUD showErrorWithStatus:@"接口已关闭"];
         }else if([responseDict[@"Code"]integerValue]==-404){
-            
             [SVProgressHUD showErrorWithStatus:@"接口维护中"];
         }else{
             

@@ -22,6 +22,18 @@ static const void *jk_UIButtonBlockKey = &jk_UIButtonBlockKey;
 //    NSMutableAttributedString *str=(NSMutableAttributedString*)self.attributedText;
 //    [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:range];
 //    self.attributedText=str;
+//    //    下划线
+//    [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
+//    //    label.strikeThroughEnabled=YES
+//    
+//    //    删除线
+//    [content addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(3,12)];
+//    //字体大小
+//    [content addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20.0] range:NSMakeRange(0, 2)];
+//    //    字体颜色
+//    [content addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3, 10)];
+//    //删除线的颜色
+//    [content addAttribute:NSStrikethroughColorAttributeName value:[UIColor greenColor] range:NSMakeRange(8, 10)];
 
 }
 

@@ -9,9 +9,11 @@
 #ifndef UIButtonHeader_h
 #define UIButtonHeader_h
 
-#import "UIButton+LXMImagePosition.h"
+
 #import "UIButton+TouchAreaInsets.h"
 #import "UIButton+Block.h"
 #import "UIButton+ljjClick.h"
 #import "UIButton+Submitting.h"
+#import "UIButton+Layout.h"
+#import "UIButtonPosition.h"
 #endif /* UIButtonHeader_h */

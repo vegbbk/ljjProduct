@@ -25,7 +25,7 @@
 //
 //    
 //    //配置导航控制器
-    [self.navigationBar setBarTintColor:kThemeColor];
+    [self.navigationBar setBarTintColor:LThemeColor];
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:18],NSFontAttributeName,nil]];
     
 }
